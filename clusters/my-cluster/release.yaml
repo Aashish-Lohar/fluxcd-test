@@ -20,5 +20,5 @@ spec:
         kind: HelmRepository
         name: infinite-scroll-repo
         namespace: flux-system
-      version: 0.1.1
+      version: "*"
   interval: 1m0s
