@@ -1,24 +1,24 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: infinite-scroll-repo
-  namespace: flux-system
-spec:
-  interval: 2m
-  url: https://aashish-lohar.github.io/infinite-scroll
----
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
-  name: infinite-scroll-release
-  namespace: default
-spec:
-  chart:
-    spec:
-      chart: infinite-scroll-chart
-      sourceRef:
-        kind: HelmRepository
-        name: infinite-scroll-repo
-        namespace: flux-system
-      version: "*"
-  interval: 1m0s
+# apiVersion: source.toolkit.fluxcd.io/v1
+# kind: HelmRepository
+# metadata:
+#   name: infinite-scroll-repo
+#   namespace: flux-system
+# spec:
+#   interval: 2m
+#   url: https://aashish-lohar.github.io/infinite-scroll
+# ---
+# apiVersion: helm.toolkit.fluxcd.io/v2
+# kind: HelmRelease
+# metadata:
+#   name: infinite-scroll-release
+#   namespace: default
+# spec:
+#   chart:
+#     spec:
+#       chart: infinite-scroll-chart
+#       sourceRef:
+#         kind: HelmRepository
+#         name: infinite-scroll-repo
+#         namespace: flux-system
+#       version: "*"
+#   interval: 1m0s
